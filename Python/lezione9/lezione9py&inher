@@ -1,0 +1,48 @@
+Lezione 9 Python & Ereditarietà
+
+Class definition of an object type
+
+- Class name is the type
+    class
+
+getter/setter
+
+    ----sistema crashato X( vedi slides-----
+
+
+Information hiding
+
+l'autore della classe può cambiare il nome delle variabili-attributi (may change data attribute variable names)
+
+
+
+Se stai accedendo agli attributi fuori dalla classe e la definizione
+della classe cambia, potresti avere degli errori
+
+Fuori dalla classe, utilizza getters e setters
+
+a.get typy(age) NON a.age
+
+
+Python non è ideale per l'information hiding
+
+Ti permette di accedere ai dati fuori dalla definizione della classe
+print(a.age)
+(in java questa cosa non si può fare)
+
+Ti permette di scrivere sui dati fuori dalla classe di definizione
+a.age = 'infinite'
+
+Ti permette di creare degli attributi per un'istanza fuori dalla classe
+a.size = "tiny
+
+Usare qualunque di questi non va bene!!
+
+
+Default arguments
+
+sono utilizati se nessun argomento è dato
+
+def set_name(self, newname=)
+
+

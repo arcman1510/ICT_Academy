@@ -1,0 +1,33 @@
+What is object oriented programming?
+
+It's a type of programming where everything that you write 
+is revolved around one or more objects
+
+Puoi anche personalmente creare i tuoi oggetti complessi
+
+Puoi modellare lo schema con gli oggetti che interagiscono l'uno con l'altro
+
+
+            ------->
+Studente                Esame
+            <-------
+
+Oppure
+
+Tanti oggetti dello stesso tipo (e quindi nella stessa classe)
+
+Bob       ---------------------->
+Alice           Sostengono l'esame      I2P Exam
+Eva       ---------------------->    
+
+
+
+
+Classi - sono delle stanze che contiene gli oggetti, le variabili e le funzioni
+
+Le classi solitamente specificano degli attributi (dati) e dei metodi (funzioni)
+
+Un attributo può corrispodnere uno stato specifico di un oggetto
+
+Un metodo può corrispondere al comportamento di un oggetto
+

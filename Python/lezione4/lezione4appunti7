@@ -1,0 +1,50 @@
+Scheda Lezione 4 appunti: 7- Problem Solving
+
+Error Types
+    Syntax, Logic, Runtime
+
+-Deviation from expected behaviour of a programme
+
+Syntax Errors
+    most common type of error in Python
+
+    Occur when the code is not written according to the rules of the programme
+
+    Questi sono i più facili da risolvere, basta conoscere
+    la sintassi del programma in questione e avere molta
+    attenzione. Non sono facili da scavare in quanto non
+    sempre è facile individurare (esempio) la giusta
+    indentazione o un punto e virgola mancante
+
+     
+
+Runtime Errors
+    Gli errori runtime devono essere sempre risolti 
+    osservando il codice e trovare il modo per girare intorno
+    per rientrare nella norma (es: except)
+
+Logical Errors
+
+
+
+    Gli errori più difficili da scavare, perché
+    il programma non segue la logica che hai impostatp
+    all'interno del codice(che può essere comunque giusto)
+
+
+
+Design Patern
+
+    Uno schema che mostra una sequenza di azioni eseguti all'interno di un codice. I design pattern orientati agli oggetti tipicamente mostrano relazioni ed interazioni tra classi o oggetti. Per cui, si può
+    paragonare questo concetto come "schema progettuale"
+    (o concettuale)... una soluzione progettuale
+    generale ad un problema ricorrente, in quanto
+    si seguono delle istruzioni (modelo logico) per
+    poter applicare la risuazione di un problema
+
+
+Divide and conquer
+
+    Dividendo un problema grosso in parti più piccole di modo che il problema si pùò risolvere più facilmente. Con una parte di problema, che diventa così un problema più piccolo, posso gestirla e di conseguenza risolverla. Risolvendo un problema per volta, risolvo tutti i problemi facenti parti del problema grande principale
+
+Esempio: vedi pagina 19 delle slides 7-Problem Solving

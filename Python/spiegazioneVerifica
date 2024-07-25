@@ -1,0 +1,90 @@
+"""
+Q1
+Nel gioco del blackjack,
+il valore di una mano è determinato dalla somma dei valori delle carte. 
+Ogni carta ha un valore compreso tra 2 e 11 compresi. 
+Tuttavia, se una mano contiene un asso, il valore dell'asso può essere 1 o 11, 
+a seconda di quale sia più favorevole al giocatore in quel momento. 
+Dato un elenco di valori delle carte che rappresentano una mano di blackjack, 
+scrivi una funzione per determinare il valore totale della mano.
+"""
+
+
+
+def blackjack(hand: list[int]) -> int:
+    #contare la somma totale delle carte
+    #se abbiamo un asso contiamo anche quello
+    #queste variabili vanno dichiarate all'inizio
+    total_sum: int = sum(hand)
+    num_aces: int = hand.count(1) + hand.count(11)
+    #mentre ci troviamo con la somma totale più di 21,
+    #togliamo 10 dalla somma totale e 1 dal numero di assi
+    while total_sum > 21 and num_aces:
+        total_sum -= 10
+        num_aces -= 1
+
+    return total_sum
+#l'obiettivo è quello di non andare oltre il 21
+#se supero 21 entro nella condizione (quindi nel loop)
+# e decremento. Questo perché l'asso in Blackjack
+# può valere sia come 10 che come 1. Ovviamente devo 
+#vincere e quindi decremento... dopodiché
+#ritorno la somma totale
+
+"""
+QJ
+vedi foto
+"""
+"""
+def construct_rectangle(area: float) -> list[float]:
+    result: list[int] = [0,0]
+    half_area
+    for i in range(area+1, 1, -1):
+        for j in range(1, area+1):
+            if i >= j and i* j == area:
+                    result.append([i,j])
+
+    diff_min: float = float('inf')
+    index: int = 0
+    for i in range(len(result)):
+         curr_diff: float = result[i][0] - result[i][1]
+         if curr_diff <= diff_min:
+              diff_min = curr_diff
+              index = i
+    return result[index]
+"""
+def construct_rectangle(area: float) -> list[int]:
+    sqrt_area = int(area ** 0.5)
+    for width in range(sqrt_area, 0, -1):
+        if area % width == 0:
+            height = area // width
+            return [height, width]
+        
+"""
+QJ2
+Date due stringhe note e magazine, restituisci true se note può essere
+costruita utilizzando le lettere di magaizne e false in caso contrario.
+Ogni lettera nella magazine piò essere utilizzata solo una volta in note.     
+"""
+
+def ransom(note:str, magazine: str) -> bool:
+    char_count: dict[str, int] = {}
+    for char in magazine:
+         if char in char_count:
+            char_count[char] = char_count[char] + 1
+         else:
+            char_count[char] = 0
+
+    for char in note:
+        if char_count.get(char, 0) == 0:
+            return False
+        char_count[char] -= 1
+
+    return True
+
+"""
+Q4
+Scrivi una funzione prime_factors(n: int) -> list[int] 
+che trova i fattori primi di un numero n dato in input
+"""
+#def prime_factors(n: int) -> list[int]:

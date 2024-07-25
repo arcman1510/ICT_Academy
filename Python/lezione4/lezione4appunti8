@@ -1,0 +1,29 @@
+Scheda Lezione 4 appunti: 8- Functions
+
+What are functions?
+● Functions are blocks of code that perform a specific task
+● They allow you to break down your code into smaller, reusable parts
+● Functions can take input, perform operations, and return output
+● The code within a function can be flexible based on the input ( → parameters)
+
+Built-in functions
+Python comes with a variety of built-in functions that are readily available for use.
+Examples of built-in functions include print(), len(), max(), min(),
+sum(), abs(), round(), sorted(), range(), and many more.
+To use a built-in function, simply call it by its name followed by parentheses.
+Example: print("Hello, world!")
+Cool thing: we can define our own functions, too!
+
+Definire una funzione (vedere pagina 4)
+
+def -> segnala all'interprete del programma che
+stiamo definendo una funzione
+
+(param1, param2) -> i parametri sono gli input( ciò che entra) delle funzioni, quindi ci aspettiamo 2 parametri
+con le denominazioni "param1" e "param2"
+
+: -> dai due punti in poi trovo il corpo della funzione. Qui scriviamo tutto il codice che la funzione esegue
+
+"    " -> l'indentazione è importantissima in Python. Ci serve per entrare nel corpo della funzione. Nel momento in cui abbiamo finito di scrivere il corpo della funzione ne usciamo fuori scrivendo altro codice, senza l'indentazione
+che troviamo nel corpo
+
