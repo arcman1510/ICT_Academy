@@ -48,16 +48,24 @@ order by inizio asc
 --7. Quali sono i nomi dei WP ordinati 
 --in ordine crescente (per nome)?
 
+select nome 
+from WP
+order by nome asc
 
 
 --8. Quali sono (distinte) le cause di assenza
 --di tutti gli strutturati?
+
+select distinct tipo
+from Assenza
 
 
 
 --9. Quali sono (distinte) le tipologie 
 --di attività di progetto di tutti gli strutturati?
 
+select distinct tipo
+from AttivitaProgetto
 
 
 --10. Quali sono i giorni distinti nei quali 
@@ -65,4 +73,7 @@ order by inizio asc
 --non progettuali di tipo ‘Didattica’ ? 
 --Dare il risultato in ordine crescente
 
+select distinct giorno
+from AttivitaNonProgettuale
+where tipo = 'Didattica'
 
