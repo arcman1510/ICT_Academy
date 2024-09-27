@@ -1,5 +1,6 @@
-
+from flask import Flask, json, request
 from myjson import JsonSerialize,JsonDeserialize
+
 
 
 sFileAnagrafe = "./anagrafe.json"
@@ -13,8 +14,9 @@ def GestisciAddCittadino():
     print("Ricevuta chiamata" + content_type)
     if content_type=="application/json":
         jRequest = request.json
+        print(jRequest)
         sCodiceFiscale = jRequest["codice fiscale"]
-        print("Ricevuto ": + sCodiceFiscale)
+        print("Ricevuto " + sCodiceFiscale)
         #caricare l'anagrafe
         dAnagrafe = JsonDeserialize(sFileAnagrafe)
         if sCodiceFiscale not in dAnagrafe:
@@ -27,3 +29,5 @@ def GestisciAddCittadino():
             return json.dumps(jResponse),200
     else:
         return "Errore, formato non riconosciuto", 401
+    
+api.run(host="127.0.0.1", port=8080)

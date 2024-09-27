@@ -1,16 +1,7 @@
 import json, requests
-import sys
 
 
 base_url = "http://127.0.0.1:8080"
-
-def RichiediDatiCittadino():
-    nome = input("inserisci nome cittadino: ")
-    cognome = input("inserisci conome cittadino: ")
-    dataNascita = input("inserisci data di nascita: ")
-    cf = input("inserisci codice fiscale: ")
-    jRequest = {"nome": nome, "cognome":cognome, "dataNascita":dataNascita, "codiceFiscale": cf}
-    return jRequest
 
 
 def CreaInterfaccia():
@@ -20,6 +11,14 @@ def CreaInterfaccia():
     print("3. Modifica dati cittadino")
     print("4. Elimina cittadino")
     print("5. Exit")
+
+def RichiediDatiCittadino():
+    nome = input("inserisci nome cittadino: ")
+    cognome = input("inserisci conome cittadino: ")
+    dataNascita = input("inserisci data di nascita: ")
+    cf = input("inserisci codice fiscale: ")
+    jRequest = {"nome": nome, "cognome":cognome, "data nascita":dataNascita, "codice fiscale": cf}
+    return jRequest
 
 CreaInterfaccia()
 s0per = input("seleziona operazione")
@@ -34,6 +33,10 @@ while (s0per != "5"):
             data1 = response.json()
             print(data1)
         except:
-            print("Problemi di comunicazione con il server, ripristina")
+            print("Problemi di comunicazione con il server, riprova più tardi")
+        
+        
+        
+        
         CreaInterfaccia()
         s0per = input("Selzinona")
