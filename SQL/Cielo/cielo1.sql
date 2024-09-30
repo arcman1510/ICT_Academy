@@ -8,7 +8,7 @@
 
 Select codice, comp
 From Volo
-Where durataMinuti >300
+Where durataMinuti > 180
 
 
 
@@ -16,7 +16,7 @@ Where durataMinuti >300
 
 Select distinct comp
 From Volo
-Where durataMinuti >300
+Where durataMinuti >180
 
 
 --3. Quali sono i voli (codice e nome della compagnia) 
@@ -59,10 +59,16 @@ Where ap.partenza = 'FCO'
 or ap.partenza = 'CIA'
 and ap.arrivo = 'JFK'
 
+From ArrPArt ap, LuogoAereoporto lap, LuogoAeroporto laa
+Where ap.partenza = lap.aeroporto
+and lap.citta = 'Roma'
+and ap.arrivo = laa.aeroporto
+and ap.arrivo = laa.aeroportoand laa.citta = 'New York'
+
 --8. Quali sono gli aeroporti (con codice IATA, nome e luogo) 
 --nei quali partono voli della compagnia di nome ‘MagicFly’ ?
 
-Select a.codice, a.nome, la.citta
+Select a.codice, a.nome, la.citta, la.nazione
 From Aeroporto a, LuogoAeroporto la, ArrPart ap
 Where a.codice = la.aeroporto
 And a.codice = ap.partenza
