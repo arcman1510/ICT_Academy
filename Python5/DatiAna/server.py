@@ -8,6 +8,11 @@ api = Flask(__name__)
 
 @api.route('/add_cittadino', methods=['POST'])
 
+def GestisciPippo():
+    myresponse = requests.get("https://www.google.it")
+    return myresponse.text
+
+
 def GestisciAddCittadino():
     #prende i dati della richiesta
     content_type = request.headers.get('Content-Type')
@@ -22,7 +27,7 @@ def GestisciAddCittadino():
         if sCodiceFiscale not in dAnagrafe:
             dAnagrafe[sCodiceFiscale] = jRequest
             JsonSerialize(dAnagrafe,sFileAnagrafe)
-            jResponse = {"Error":"00", "Msg": "ok"}
+            jResponse = {"Error":"000", "Msg": "ok"}
             return json.dumps(jResponse),200
         else:
             jResponse = {"Errore":"001", "Msg": "codice fiscale già inserito"}

@@ -35,7 +35,18 @@ while (s0per != "5"):
         except:
             print("Problemi di comunicazione con il server, riprova più tardi")
         
-        
+    if s0per=="2":
+        api_url = base_url +"/read_cittadino"
+        codiceFiscaleCittadino=input("Inserire codice fiscale:")
+        api_url += "/" +codiceFiscaleCittadino
+        try:
+            response = requests.get(api_url)
+            print(response.status_code)
+            print(response.headers["Content-Type"])
+            data1 = response.json()
+            print(data1)
+        except:
+
         
         
         CreaInterfaccia()
