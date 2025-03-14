@@ -1,0 +1,26 @@
+#Permette di creare dei multi container
+
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: Accademia
+      MYSQL_USER: postgres
+      MYSQL_PASSWORD: postgres
+    ports: "5432:5432"
+    
+    app:
+      image: "app.py" # Sostituisci con l'immagine della tua applicazione
+      restart: always
+      depends_on: db 
+      environment:
+          DATABASE_HOST: db
+          DATABASE_USER: user
+          DATABASE_PASSWORD: user_password
+          DATABASE_NAME: my_database   
+          ports:
+            "8000:8000" # Modifica la porta in base alla tua applicazione

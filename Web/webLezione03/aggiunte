@@ -1,0 +1,4 @@
+app.get('/sendFile', (req, res) => {
+	console.log("Mi hai chiesto la form di invio del file");
+	res.sendFile("sendfile.html", { root: './htdoc' });
+	});
