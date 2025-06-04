@@ -21,7 +21,8 @@ def funzione(lista_di_tuple: list[tuple]) -> dict:
             nuovo_dizionario[chiave] = valore
             
             
-funzione(lista_di_tuple)
+dizionario: dict = funzione(lista_di_tuple=esempio)
+print(dizionario) 
 
 
 #2) Scrivi una funzione che prenda una lista di numeri e ritorni un dizionario 
@@ -73,3 +74,31 @@ def filtra_prodotti(prodotti):
             nuovo_prezzo = round(prezzo * 1.10, 2)
             risultato[nome] = nuovo_prezzo
     return risultato
+
+#3) Scrivi una funzione che accetti un dizionario di prodotti 
+# con i relativi prezzi e restituisca un nuovo dizionario con 
+# solo i prodotti che hanno un prezzo inferiore a 50, 
+# ma con i prezzi aumentati del 10% e arrotondati a due cifre decimali.
+
+prodotti_input: dict = {
+    "pane": 43.3,
+    "latte": 55.5,
+    "pasta": 22.5,
+    "olio": 47.9
+}
+
+def filtra_prodotti(prodotti: dict[str, float]) -> dict[str, float]:
+    nuovo_dizionario: dict = {}
+    
+    for prodotto in prodotti:
+        prezzo = prodotti[prodotto]
+        
+        if prezzo < 50:
+            nuovo_prezzo = round(prezzo * 1.10, 2)
+            nuovo_dizionario[prodotto] = nuovo_prezzo
+            
+    return nuovo_dizionario
+
+
+prodotti_filtrati: dict = filtra_prodotti(prodotti=prodotti_input)
+print(prodotti_filtrati)
