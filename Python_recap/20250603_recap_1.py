@@ -25,6 +25,9 @@ dizionario: dict = funzione(lista_di_tuple=esempio)
 print(dizionario) 
 
 
+print("")
+print("")
+
 #2) Scrivi una funzione che prenda una lista di numeri e ritorni un dizionario 
 #che classifi chi i numeri in liste separate per numeri positivi e negativi.
 
@@ -61,19 +64,11 @@ def positivi_negativi(list) -> dict:
             
     return dizionario
 
-elementi_filtrati: dict = positivi_negativi(lista=lista)
+elementi_filtrati: dict = positivi_negativi(list=lista)
 print(elementi_filtrati)
 
-
-
-
-def filtra_prodotti(prodotti):
-    risultato = {}
-    for nome, prezzo in prodotti.items():
-        if prezzo < 50:
-            nuovo_prezzo = round(prezzo * 1.10, 2)
-            risultato[nome] = nuovo_prezzo
-    return risultato
+print("")
+print("")
 
 #3) Scrivi una funzione che accetti un dizionario di prodotti 
 # con i relativi prezzi e restituisca un nuovo dizionario con 
