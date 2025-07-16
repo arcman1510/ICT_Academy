@@ -49,16 +49,39 @@ for item in tup:
     print(item)
     
 mylist1 = [(1,2),(3,4),(5,6),(7,8)]
-
+print('')
 #lunghezza della lista
-len(mylist1)
+print(len(mylist1))
 
 #spacchettamento di una tupla
 for item in mylist1:
     print(item)
     
+print('')
+print('')
+    
 for a,b in mylist1:
     print(a)
     print(b)
     
-mylist1 = [(1,2,3),(5,6,7),(8,9,10)]
+print('')
+print('')    
+    
+mylist2 = [(1,2,3),(5,6,7),(8,9,10)]
+
+for a,b,c in mylist2:
+    print(b)
+    
+print('')
+print('')
+
+d = {'k1':1, 'k2':2, 'k3':3}
+
+for item in d:
+    print(item)
+    
+for item in d.items():
+    print(item)
+
+for key,value in d.items():
+    print(value)
