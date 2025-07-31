@@ -1,6 +1,3 @@
-#Manuel Archer
-#18/04/2024
-
 print("Hello World")
 
 #2-3. Personal Message: Use a variable to represent a person’s name, and 
@@ -39,10 +36,27 @@ name_lower: str = name.lower()
 
 #Questa è una variabile che contiene il nome maiuscolo
 name_upper: str = name.upper()
- 
- 
+
 print(f"{name}, {name_upper} , {name_lower}")
 print("")
+
+print(f"Ecco come appare il nome del mio Fratellino nei tre stili principali:")
+
+fratellino: str = "Kai Leoni"
+
+print(fratellino.lower())
+print(fratellino.upper())
+print(fratellino.title())
+
+
+print(f"Ecco come appare il nome del mio Fratellone nei tre stili principali:")
+
+fratellone: str = "Manuel Archer"
+
+print(fratellone.lower())
+print(fratellone.upper())
+print(fratellone.title())
+
 
 #2-5. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. 
 #Your output should look something like the following, including the quotation marks: 
@@ -69,15 +83,3 @@ filename: str = 'python_notes.txt'
 print(filename)
 print(filename.removesuffix(".txt"))
 print("")
-
-
-"""
-3-1. Names: Store the names of a few of your friends in a list called names. 
-Print each person’s name by accessing each element in the list, one at a time.
-"""
-immaginaryfriendslist = ["Tizio", "Caio", "Sempronio", "Ronaldo", "Zanetti"]
-
-"""
-3-2. Greetings: Start with the list you used in Exercise 3-1, but instead of just printing each person’s name,
- print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
-"""
