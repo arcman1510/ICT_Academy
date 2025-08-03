@@ -74,6 +74,29 @@ message: str = ("once said, 'A person who never made a mistake never tried anyth
 print(famous_person, message)
 print("")
 
+famous_person: str = "Albert Einstein"
+quote: str = '"A person who never made a mistake never tried anything new."'
+message: str = f"{famous_person} once said, {quote}"
+print(message)
+
+
+famous_person: str = "Albert Einstein"
+quote: str = '"A person who never made a mistake never tried anything new."'
+message: str = f"{famous_person} once said, {quote}"
+
+print("Il silenzio della sera si posa piano sulle cose...")
+print("Io e te seduti in terrazza, senza bisogno di troppe parole.")
+print("Poi guardo le stelle, ti sorrido e dico:")
+print(message)
+
+
+famous_person: str = input("Inserisci il nome della persona famosa: ")
+quote: str = input("Inserisci la citazione della persona: ")
+
+message: str = f'{famous_person} once said, "{quote}"'
+print(message)
+
+
 #2-8. File Extensions: 
 #Python has a removesuffix() method that works exactly like removeprefix(). 
 #Assign the value 'python_notes.txt' to a variable called filename. 
