@@ -91,7 +91,7 @@ print(message)
 
 
 famous_person: str = input("Inserisci il nome della persona famosa: ")
-quote: str = input("Inserisci la citazione della persona: ")
+quote: str = input("Inserisci la citazione della persona: ") 
 
 message: str = f'{famous_person} once said, "{quote}"'
 print(message)
