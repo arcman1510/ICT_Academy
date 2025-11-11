@@ -6,12 +6,11 @@ print("Hello World")
 
 
 
-
 # Questa variabile contiene il nome
 name: str = "Mario"
 print(f"Ciao {name}, etc....")
 
-print("")
+print("") 
 
 # Questa variabile contiene il messaggio
 name: str = "Mario"
